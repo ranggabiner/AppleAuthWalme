@@ -1,0 +1,41 @@
+//
+//  SignInView.swift
+//  AppleAuthWalme
+//
+//  Created by Rangga Biner on 17/06/24.
+//
+
+import SwiftUI
+
+struct SignInView: View {
+    @StateObject var viewModel = SignInViewModel()
+    @Binding var appUser: Users?
+    
+    var body: some View {
+        VStack {
+            Button {
+                Task {
+                    await viewModel.signInWithApple()
+                    if viewModel.appUser != nil {
+                        appUser = viewModel.appUser
+                    }
+                }
+            } label: {
+                Text("Sign in with Apple")
+                    .foregroundStyle(Color(.black))
+            }
+        }
+        .padding()
+        .alert(isPresented: Binding<Bool>(
+            get: { viewModel.errorMessage != nil },
+            set: { _ in viewModel.errorMessage = nil }
+        )) {
+            Alert(title: Text("Error"), message: Text(viewModel.errorMessage ?? ""), dismissButton: .default(Text("OK")))
+        }
+    }
+}
+
+#Preview {
+    SignInView(appUser: .constant(.init(id: "1234", email: "jajang@gmail.com", name: "Jajang")))
+}
+
