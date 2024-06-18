@@ -26,10 +26,7 @@ struct SignInView: View {
             }
         }
         .padding()
-        .alert(isPresented: Binding<Bool>(
-            get: { viewModel.errorMessage != nil },
-            set: { _ in viewModel.errorMessage = nil }
-        )) {
+        .alert(isPresented: $viewModel.showErrorAlert) {
             Alert(title: Text("Error"), message: Text(viewModel.errorMessage ?? ""), dismissButton: .default(Text("OK")))
         }
     }
@@ -38,4 +35,3 @@ struct SignInView: View {
 #Preview {
     SignInView(appUser: .constant(.init(id: "1234", email: "jajang@gmail.com", name: "Jajang")))
 }
-

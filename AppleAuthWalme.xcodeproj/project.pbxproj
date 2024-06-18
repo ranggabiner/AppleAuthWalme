@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		8F3B0D882C208E4700C692FB /* UpdateNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3B0D872C208E3D00C692FB /* UpdateNameView.swift */; };
 		8F3B0D8C2C208E5C00C692FB /* UpdateNameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3B0D8B2C208E5600C692FB /* UpdateNameViewModel.swift */; };
+		8F5A00C22C211430003A1FFC /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5A00C12C21142D003A1FFC /* UserManager.swift */; };
 		8FF5171C2C20514D00833A1B /* AppleAuthWalmeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF5171B2C20514D00833A1B /* AppleAuthWalmeApp.swift */; };
 		8FF5171E2C20514D00833A1B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF5171D2C20514D00833A1B /* ContentView.swift */; };
 		8FF517202C20514E00833A1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FF5171F2C20514E00833A1B /* Assets.xcassets */; };
 		8FF517232C20514E00833A1B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FF517222C20514E00833A1B /* Preview Assets.xcassets */; };
 		8FF517332C2051C400833A1B /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF517322C2051C100833A1B /* Users.swift */; };
-		8FF517352C2051D600833A1B /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF517342C2051D200833A1B /* AuthManager.swift */; };
 		8FF517372C2051DE00833A1B /* SignInApple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF517362C2051D900833A1B /* SignInApple.swift */; };
 		8FF517392C2051FC00833A1B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF517382C2051F900833A1B /* HomeViewModel.swift */; };
 		8FF5173B2C20520400833A1B /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF5173A2C2051FF00833A1B /* SignInViewModel.swift */; };
@@ -28,13 +28,13 @@
 /* Begin PBXFileReference section */
 		8F3B0D872C208E3D00C692FB /* UpdateNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateNameView.swift; sourceTree = "<group>"; };
 		8F3B0D8B2C208E5600C692FB /* UpdateNameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateNameViewModel.swift; sourceTree = "<group>"; };
+		8F5A00C12C21142D003A1FFC /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		8FF517182C20514D00833A1B /* AppleAuthWalme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleAuthWalme.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FF5171B2C20514D00833A1B /* AppleAuthWalmeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleAuthWalmeApp.swift; sourceTree = "<group>"; };
 		8FF5171D2C20514D00833A1B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8FF5171F2C20514E00833A1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8FF517222C20514E00833A1B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8FF517322C2051C100833A1B /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
-		8FF517342C2051D200833A1B /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		8FF517362C2051D900833A1B /* SignInApple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInApple.swift; sourceTree = "<group>"; };
 		8FF517382C2051F900833A1B /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		8FF5173A2C2051FF00833A1B /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
@@ -100,8 +100,8 @@
 		8FF5172D2C20519600833A1B /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				8F5A00C12C21142D003A1FFC /* UserManager.swift */,
 				8FF517362C2051D900833A1B /* SignInApple.swift */,
-				8FF517342C2051D200833A1B /* AuthManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -222,12 +222,12 @@
 			files = (
 				8FF5173F2C20521000833A1B /* SignInView.swift in Sources */,
 				8FF517372C2051DE00833A1B /* SignInApple.swift in Sources */,
+				8F5A00C22C211430003A1FFC /* UserManager.swift in Sources */,
 				8F3B0D882C208E4700C692FB /* UpdateNameView.swift in Sources */,
 				8FF5173B2C20520400833A1B /* SignInViewModel.swift in Sources */,
 				8FF517492C20543800833A1B /* CreateNameViewModel.swift in Sources */,
 				8FF517392C2051FC00833A1B /* HomeViewModel.swift in Sources */,
 				8FF5171E2C20514D00833A1B /* ContentView.swift in Sources */,
-				8FF517352C2051D600833A1B /* AuthManager.swift in Sources */,
 				8FF5173D2C20520A00833A1B /* HomeView.swift in Sources */,
 				8FF517332C2051C400833A1B /* Users.swift in Sources */,
 				8F3B0D8C2C208E5C00C692FB /* UpdateNameViewModel.swift in Sources */,

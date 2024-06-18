@@ -25,7 +25,7 @@ struct ContentView: View {
         }
         .onAppear {
             Task {
-                self.appUser = try? await AuthManager.shared.getCurrentSession()
+                self.appUser = try? await UserManager.shared.getCurrentSession()
             }
         }
     }

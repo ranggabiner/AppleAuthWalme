@@ -11,19 +11,21 @@ import SwiftUI
 class SignInViewModel: ObservableObject {
     @Published var appUser: Users?
     @Published var errorMessage: String?
+    @Published var showErrorAlert: Bool = false
 
-    let signInApple = SignInApple()
+    let authManager = UserManager.shared
     
     func signInWithApple() async {
         do {
-            let appleResult = try await signInApple.startSignInWithAppleFlow()
-            let user = try await AuthManager.shared.signInWithApple(idToken: appleResult.idToken, nonce: appleResult.nonce)
+            let appleResult = try await SignInApple().startSignInWithAppleFlow()
+            let user = try await authManager.signInWithApple(idToken: appleResult.idToken, nonce: appleResult.nonce)
             DispatchQueue.main.async {
                 self.appUser = user
             }
         } catch {
             DispatchQueue.main.async {
                 self.errorMessage = "Error signing in with Apple: \(error.localizedDescription)"
+                self.showErrorAlert = true
             }
         }
     }

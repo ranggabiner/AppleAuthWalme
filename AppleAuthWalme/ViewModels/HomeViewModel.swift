@@ -16,7 +16,7 @@ class HomeViewModel: ObservableObject {
 
     func signOut() async {
         do {
-            try await AuthManager.shared.signOut()
+            try await UserManager.shared.signOut()
             DispatchQueue.main.async {
                 self.appUser = nil
             }
